@@ -6,12 +6,11 @@
         <?php include "header.php"; ?>
         <div>            
             <?php
-                if(isset($_GET['contents/'])){
-                    include 'contents/' . $_GET['contents/'];
+                if(isset($_GET['path'])){
+                    include 'contents/' . $_GET['path'];
                 }
-                
                 else{
-                    ?><img src="http://www.restaurant-la-medina.fr/images/carte-pdf1.jpg"><?php
+                    include 'contents/home.php';
                 }
             ?>    
         </div>

@@ -8,9 +8,10 @@
                 foreach($page as $value){
                     $nom = basename($value, '.php');
                     if(!in_array($value, array(".",".."))){
-                        echo "</li><a href='contents/" . $value . "'>" . $nom . " " . "</a></li>";
+                        echo "</li><a href='?path=" . $value . "'>" . $nom . " " . "</a></li>";
                     }
                 } 
+                include "scripts/connexion.php";
             ?>
         </ul>
     </div>
