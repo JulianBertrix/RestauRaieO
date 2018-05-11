@@ -16,16 +16,17 @@
         <p><?php /*echo $_POST['message'];*/ ?></p><br><?php      
     }     
     else{
-        echo "Veuillez vous inscrire";
+        echo "Veuillez vous inscrire pour poster un message";
     }
     
     $path = $_SERVER['DOCUMENT_ROOT'] . "/datas/message.json";
  
     $json = file_get_contents($path);
     $message_json = json_decode($json, true);
-     
-    foreach($message_json as $value){
-        echo $value;
+    
+    foreach($message_json as $value){ 
+        ?><h4><?php echo $value['user']; ?></h4><br>
+        <p><?php echo $value['message']; ?></p><br><?php
     }
 ?>
 
