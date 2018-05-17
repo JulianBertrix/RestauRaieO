@@ -7,7 +7,4 @@
         <input type="password" name="password" placeholder="password">
         <input type="submit" value="valider"/>
     </form>
-    <p><?php 
-        
-    ?></p>
 </div>
