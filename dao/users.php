@@ -1,10 +1,16 @@
 <?php
-    /*
+    
     //retourne l'id d'un utilisateur
     function createUser(){
-    
+        $dbh = new PDO('mysql:host=localhost;dbname=resto_db_bwb', "root", "");
+        $request = "INSERT INTO users (username, password, email) VALUES ('add', 'add', 'a@d.d')";
+        $statement = $dbh->query($request);
+        $result = "SELECT id FROM users WHERE username='add'";
+        $res_statement = $dbh->query($result);
+        $id = $res_statement->fetch();
+        return $id;
     }
-    */
+    
     //retourne un tableau associatif correspondant à l'id d'un utilisateur passé en argument 
     function get_user($id){
         $dbh = new PDO('mysql:host=localhost;dbname=resto_db_bwb', "root", "");

@@ -8,6 +8,12 @@
     echo "\n";
     echo "\n";
     
+    echo "l'id d'un nouvel utilisateur";
+    echo "\n";
+    var_dump(createUser());
+    echo "\n";
+    echo "\n";
+    
     echo "les utilisateurs";
     echo "\n";
     var_dump(getUser());
